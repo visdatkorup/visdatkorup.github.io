@@ -61,7 +61,40 @@ var mapOption = {
                 emphasis:{label:{show:true}}
             },
             data:[
-                {name : 'Aceh', value : 20000000},
+                {name : 'Aceh', value : 7},
+				{name : 'Kalimantan Timur', value : 4},
+				{name : 'Kalimantan Selatan', value : 3},
+				{name : 'Sulawesi Barat', value : 3},
+				{name : 'Sulawesi Tengah', value : 3},
+				{name : 'Nusa Tenggara Barat', value : 4},
+				{name : 'Sulawesi Tenggara', value : 4},
+				{name : 'Sulawesi Utara', value : 4},
+				{name : 'Bangka-Belitung', value : 5},
+				{name : 'Lampung', value : 5},
+				{name : 'Irian Jaya Barat', value : 5},
+				{name : 'Bali', value : 6},
+				{name : 'Bengkulu', value : 6},
+				{name : 'Gorontalo', value : 6},
+				{name : 'Kepulauan Riau', value : 6},
+				{name : 'Maluku', value : 6},
+				{name : 'Nusa Tenggara Timur', value : 6},
+				{name : 'Sumatera Selatan', value : 6},
+				{name : 'Yogyakarta', value : 7},
+				{name : 'Jakarta Raya', value : 8},
+				{name : 'Kalimantan Barat', value : 8},
+				{name : 'Maluku Utara', value : 8},
+				{name : 'Sumatera Utara', value : 9},
+				{name : 'Banten', value : 10},
+				{name : 'Sulawesi Selatan', value : 10},
+				{name : 'Kalimantan Tengah', value : 12},
+				{name : 'Papua', value : 12},
+				{name : 'Sumatera Barat', value : 12},
+				{name : 'Jambi', value : 14},
+				{name : 'Riau', value : 16},
+				{name : 'Jawa Timur', value : 21},
+				{name : 'Jawa Barat', value : 25},
+				{name : 'jawa Tengah', value : 29},
+				{name : 'Aceh', value : 20000000},
             ]
         }
     ]
@@ -98,19 +131,14 @@ var modusOption = {
     yAxis : [
         {
             type : 'category',
-            data : ['巴西','印尼','美国','印度','中国','世界人口(万)']
+            data : ['Anggaran Ganda','Pungutan Liar','Suap','Kegiatan Fiktif','Pemotongan Anggaran','Penyalahgunaan Wewenang','Mark up','Laporan Fiktif','Penggelapan','Penyalahgunaan Anggaran']
         }
     ],
     series : [
         {
-            name:'2011年',
+            //name:'2011年',
             type:'bar',
-            data:[18203, 23489, 29034, 104970, 131744, 630230]
-        },
-        {
-            name:'2012年',
-            type:'bar',
-            data:[19325, 23438, 31000, 121594, 134141, 681807]
+            data:[1, 8, 11, 12, 15, 20,33,66,71,71]
         }
     ]
 };
