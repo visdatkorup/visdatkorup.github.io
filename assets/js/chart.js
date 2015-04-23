@@ -93,8 +93,7 @@ var mapOption = {
 				{name : 'Riau', value : 16},
 				{name : 'Jawa Timur', value : 21},
 				{name : 'Jawa Barat', value : 25},
-				{name : 'jawa Tengah', value : 29},
-				{name : 'Aceh', value : 20000000},
+				{name : 'Jawa Tengah', value : 29},
             ]
         }
     ]
@@ -236,7 +235,91 @@ var institutionOption = {
     ]
 };
 
+var sectorOption = {
+    title : {
+        text: 'Kasus Korupsi Berdasarkan Sektor',
+        //subtext: '数据来自网络'
+    },
+    tooltip : {
+        trigger: 'axis'
+    },
+    /*legend: {
+        data:['2011年', '2012年']
+    },*/
+    toolbox: {
+        show : true,
+        feature : {
+            mark : {show: true},
+            dataView : {show: true, readOnly: false},
+            magicType: {show: true, type: ['line', 'bar']},
+            restore : {show: true},
+            saveAsImage : {show: true}
+        }
+    },
+    calculable : true,
+    xAxis : [
+        {
+            type : 'value',
+            boundaryGap : [0, 0.01]
+        }
+    ],
+    yAxis : [
+        {
+            type : 'category',
+            data : ['Pertambangan','Air Bersih','Pertahanan','Perizinan','Perhubungan','Keagamaan','Perpajakan','Kehutanan','Kelautan Perikanan','Olahraga','Peternakan','Energi','Keuangan Pusat','Tata Kota','Pemilu/Politik','Perbankan','Peradilan','Kepegawaian','Pertanian dan Perkebunan','Sosial kemasyarakatan','Kesehatan','Pendidikan','Keuangan Daerah','Infrastruktur']
+        }
+    ],
+    series : [
+        {
+            //name:'2011年',
+            type:'bar',
+            data:[1,2,3,3,3,3,5,5,6,6,7,7,7,7,9,10,11,15,16,31,38,59,116,175]
+        }
+    ]
+};
 
+var instansiOption = {
+    title : {
+        text: 'Kasus Korupsi Berdasarkan Instansi',
+        //subtext: '数据来自网络'
+    },
+    tooltip : {
+        trigger: 'axis'
+    },
+    /*legend: {
+        data:['2011年', '2012年']
+    },*/
+    toolbox: {
+        show : true,
+        feature : {
+            mark : {show: true},
+            dataView : {show: true, readOnly: false},
+            magicType: {show: true, type: ['line', 'bar']},
+            restore : {show: true},
+            saveAsImage : {show: true}
+        }
+    },
+    calculable : true,
+    xAxis : [
+        {
+            type : 'value',
+            boundaryGap : [0, 0.01]
+        }
+    ],
+    yAxis : [
+        {
+            type : 'category',
+            data : ['Dirjen Pajak','Komisi Yudisial','Bank','Koperasi','Dinas Pendapatan Daerah','Dinas Perdaganan dan Perindustrian','PNPM','Bappeda','BUMD','Dinas Sosial, Transmigrasi, dan Tenaga Kerja','Penegak Hukum','Instansi Kesehatan','Dinas (lain-lain)','Badan non Pemerintah','Dinas Kelautan dan Perikanan','Dinas Kesehatan','Dishubkominfo','Instansi Pendidikan','BUMN','Dinas ESDM','Badan Pemerintahan','Dinas Pendidikan','Kementrian','Dinas Pekerjaan Umum','DPRD','Pemerintahan Daerah']
+        }
+    ],
+    series : [
+        {
+            //name:'2011年',
+            type:'bar',
+            data:[1,1,2,2,3,3,3,4,4,4,4,5,6,7,8,8,9,13,13,14,18,19,19,20,21,97]
+        }
+    ]
+};
 require(
     [
         'echarts',
