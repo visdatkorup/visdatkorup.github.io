@@ -101,15 +101,15 @@ var mapOption = {
 
 var modusOption = {
     title : {
-        text: '世界人口总量',
-        subtext: '数据来自网络'
+        text: 'Kasus Korupsi Berdasarkan Modus',
+        //subtext: '数据来自网络'
     },
     tooltip : {
         trigger: 'axis'
     },
-    legend: {
+    /*legend: {
         data:['2011年', '2012年']
-    },
+    },*/
     toolbox: {
         show : true,
         feature : {
@@ -142,6 +142,49 @@ var modusOption = {
     ]
 };
 
+var sektorOption = {
+    title : {
+        text: 'Kasus Korupsi Berdasarkan Sektor',
+        //subtext: '数据来自网络'
+    },
+    tooltip : {
+        trigger: 'axis'
+    },
+    /*legend: {
+        data:['2011年', '2012年']
+    },*/
+    toolbox: {
+        show : true,
+        feature : {
+            mark : {show: true},
+            dataView : {show: true, readOnly: false},
+            magicType: {show: true, type: ['line', 'bar']},
+            restore : {show: true},
+            saveAsImage : {show: true}
+        }
+    },
+    calculable : true,
+    xAxis : [
+        {
+            type : 'value',
+            boundaryGap : [0, 0.01]
+        }
+    ],
+    yAxis : [
+        {
+            type : 'category',
+            data : ['Pertambangan','air bersih','pertahanan','perizinan','perhubungan','keagamaan','perpajakan','kehutanan','kelautan perikanan','olahraga','peternakan','energi','keuangan pusat','tata kota','pemilu/politik','','perbankan','peradilan','Kepegawaian','pertanian dan perkebunan','Sosial kemasyarakatan','kesehatan','pendidikan','keuangan daerah','infrastruktur]
+        }
+    ],
+    series : [
+        {
+            //name:'2011年',
+            type:'bar',
+            data:[1,2,3,3,3,3,5,5,6,6,7,7,7,7,9,10,11,15,16,31,38,59,116,175]
+        }
+    ]
+};
+
 require(
     [
         'echarts',
@@ -165,7 +208,7 @@ require(
         modusChart.setOption(modusOption);
 
         var sectorChart = ec.init(document.getElementById('sector-chart'));
-        sectorChart.setOption(modusOption);
+        sectorChart.setOption(sektorOption);
 
         var institutionChart = ec.init(document.getElementById('institution-chart'));
         institutionChart.setOption(modusOption);
