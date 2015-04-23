@@ -15,8 +15,8 @@ require.config({
 
 var mapOption = {
     title : {
-        text: 'USA Population Estimates (2012)',
-        subtext: 'Data from www.census.gov.',
+        text: 'Kasus Korupsi di Indonesia Berdasarkan Provinsi (Semester I 2014)',
+        subtext: 'Data from ICW',
         sublink: 'http://www.census.gov/popest/data/datasets.html',
         x:'right'
     },
@@ -64,7 +64,10 @@ var mapOption = {
                 Alaska : [20, -20]
             },
             data:[
-                {name : 'Alabama', value : 4822023},
+<<<<<<< HEAD
+                {NAME_1 : 'Aceh', value : 20000000}
+=======
+                {name : 'Nanggroe Aceh Darussalam', value : 4822023},
                 {name : 'Alaska', value : 731449},
                 {name : 'Arizona', value : 6553255},
                 {name : 'Arkansas', value : 2949131},
@@ -116,6 +119,7 @@ var mapOption = {
                 {name : 'Wisconsin', value : 5726398},
                 {name : 'Wyoming', value : 576412},
                 {name : 'Puerto Rico', value : 3667084}
+>>>>>>> 0e8c4de8b230bb813dd47adb29e4ffea8d5e8778
             ]
         }
     ]
