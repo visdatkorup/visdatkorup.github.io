@@ -15,10 +15,10 @@ require.config({
 
 var mapOption = {
     title : {
-        text: 'Kasus Korupsi di Indonesia Berdasarkan Provinsi (Semester I 2014)',
-        subtext: 'Data from ICW',
-        sublink: 'http://www.census.gov/popest/data/datasets.html',
-        x:'right'
+        text: '',
+        subtext: 'Kasus Korupsi di Indonesia Berdasarkan Provinsi (Semester I 2014)',
+        x:'left',
+        y:'bottom'
     },
     tooltip : {
         trigger: 'item',
@@ -31,17 +31,18 @@ var mapOption = {
         }
     },
     dataRange: {
-        x : 'right',
-        min: 500000,
-        max: 38000000,
-        color: ['orangered','yellow','lightskyblue'],
-        text:['High','Low'],
+        x : 'left',
+        y : 'bottom',
+        min: 0,
+        max: 29,
+        color: ['darkred','lightgray'],
+        text:['Tinggi','Rendah'],
         calculable : true
     },
     toolbox: {
-        show : true,
-        //orient : 'vertical',
-        x: 'left',
+        show : false,
+        orient : 'vertical',
+        x: 'right',
         y: 'top',
         feature : {
             mark : {show: true},
@@ -52,15 +53,12 @@ var mapOption = {
     },
     series : [
         {
-            name: 'USA PopEstimates',
+            name: 'Jumlah Korupsi',
             type: 'map',
             roam: true,
             mapType: 'USA',
             itemStyle:{
                 emphasis:{label:{show:true}}
-            },
-            textFixed : {
-                Alaska : [20, -20]
             },
             data:[
                 {name : 'Aceh', value : 7},
