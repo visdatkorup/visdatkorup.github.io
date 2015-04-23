@@ -173,7 +173,7 @@ var sektorOption = {
     yAxis : [
         {
             type : 'category',
-            data : ['Pertambangan','air bersih','pertahanan','perizinan','perhubungan','keagamaan','perpajakan','kehutanan','kelautan perikanan','olahraga','peternakan','energi','keuangan pusat','tata kota','pemilu/politik','','perbankan','peradilan','Kepegawaian','pertanian dan perkebunan','Sosial kemasyarakatan','kesehatan','pendidikan','keuangan daerah','infrastruktur]
+            data : ['Pertambangan','Air Bersih','Pertahanan','Perizinan','Perhubungan','Keagamaan','Perpajakan','Kehutanan','Kelautan Perikanan','Olahraga','Peternakan','Energi','Keuangan Pusat','Tata Kota','Pemilu/Politik','Perbankan','Peradilan','Kepegawaian','Pertanian dan Perkebunan','Sosial kemasyarakatan','Kesehatan','Pendidikan','Keuangan Daerah','Infrastruktur']
         }
     ],
     series : [
