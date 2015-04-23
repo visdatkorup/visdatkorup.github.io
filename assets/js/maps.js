@@ -130,7 +130,7 @@ require(
         require('echarts/util/mapData/params').params.USA = {
 		    getGeoJson: function (callback) {
 		        // $.getJSON('//ecomfe.github.io/echarts/doc/example/geoJson/USA_geo.json', callback);
-                $.getJSON('assets/js/geojson.json', callback); // Offline
+                // $.getJSON('assets/js/geojson.json', callback); // Offline
                 $.getJSON('//bitbucket.org/rifani/geojson-political-indonesia/raw/0e89dcb0b0454c5afffd414fd0cd0c25f1688d10/IDN_adm_1_province.json', callback); // Online
 		    }
 		    // specialArea : {
