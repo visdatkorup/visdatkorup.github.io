@@ -95,8 +95,7 @@ var mapOption = {
 				{name : 'Riau', value : 16},
 				{name : 'Jawa Timur', value : 21},
 				{name : 'Jawa Barat', value : 25},
-				{name : 'jawa Tengah', value : 29},
-				{name : 'Aceh', value : 20000000},
+				{name : 'Jawa Tengah', value : 29},
             ]
         }
     ]
