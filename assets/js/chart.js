@@ -211,6 +211,12 @@ require(
 
         var modusChart = ec.init(document.getElementById('modus-chart'));
         modusChart.setOption(modusOption);
+
+        var sectorChart = ec.init(document.getElementById('sector-chart'));
+        sectorChart.setOption(modusOption);
+
+        var institutionChart = ec.init(document.getElementById('institution-chart'));
+        institutionChart.setOption(modusOption);
        
     }
 );
