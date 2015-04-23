@@ -27,7 +27,7 @@ var mapOption = {
         formatter : function (params) {
             var value = (params.value + '').split('.');
             value = value[0].replace(/(\d{1,3})(?=(?:\d{3})+(?!\d))/g, '$1,');
-            return params.seriesName + '<br/>' + params.name + ' : ' + value;
+            return params.name + '<br/>' + params.seriesName + ' : ' + value;
         }
     },
     dataRange: {
