@@ -64,7 +64,7 @@ var mapOption = {
                 Alaska : [20, -20]
             },
             data:[
-                {name : 'Alabama', value : 4822023},
+                {name : 'Aceh', value : 4822023},
                 {name : 'Alaska', value : 731449},
                 {name : 'Arizona', value : 6553255},
                 {name : 'Arkansas', value : 2949131},
