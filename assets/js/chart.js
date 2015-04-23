@@ -102,21 +102,21 @@ var mapOption = {
 
 var modusOption = {
     title : {
-        text: '世界人口总量',
-        subtext: '数据来自网络'
+        text: 'Korupsi Berdasarkan Modus',
+        subtext: 'Jumlah Kasus Pada Semester I 2014'
     },
     tooltip : {
-        trigger: 'axis'
-    },
-    legend: {
-        data:['2011年', '2012年']
+        trigger: 'axis',
+        axisPointer : { 
+            type : 'shadow'
+        },
     },
     toolbox: {
-        show : true,
+        show : false,
         feature : {
             mark : {show: true},
             dataView : {show: true, readOnly: false},
-            magicType: {show: true, type: ['line', 'bar']},
+            magicType: {show: true, type: ['bar']},
             restore : {show: true},
             saveAsImage : {show: true}
         }
@@ -131,8 +131,58 @@ var modusOption = {
     yAxis : [
         {
             type : 'category',
-            data : ['Anggaran Ganda','Pungutan Liar','Suap','Kegiatan Fiktif','Pemotongan Anggaran','Penyalahgunaan Wewenang','Mark up','Laporan Fiktif','Penggelapan','Penyalahgunaan Anggaran']
+            data : ['Anggaran\nGanda','Pungutan\nLiar','Suap','Kegiatan\nFiktif','Pemotongan\nAnggaran','Penyalahgunaan\nWewenang','Mark\nup','Laporan\nFiktif','Penggelapan','Penyalahgunaan\nAnggaran']
+       }
+    ],
+    grid : {
+        x : 100,
+        x2 : 0,
+    },
+    series : [
+        {
+            //name:'2011年',
+            type:'bar',
+            data:[1, 8, 11, 12, 15, 20,33,66,71,71],
+            itemStyle: {
+                normal:{color:'indianred'}
+            },
         }
+    ]
+};
+
+var sectorOption = {
+    title : {
+        text: 'Korupsi Berdasarkan Modus',
+        subtext: 'Jumlah Kasus Pada Semester I 2014'
+    },
+    tooltip : {
+        trigger: 'axis',
+        axisPointer : { 
+            type : 'shadow'
+        },
+    },
+    toolbox: {
+        show : false,
+        feature : {
+            mark : {show: true},
+            dataView : {show: true, readOnly: false},
+            magicType: {show: true, type: ['bar']},
+            restore : {show: true},
+            saveAsImage : {show: true}
+        }
+    },
+    calculable : true,
+    xAxis : [
+        {
+            type : 'value',
+            boundaryGap : [0, 0.01]
+        }
+    ],
+    yAxis : [
+        {
+            type : 'category',
+            data : ['Anggaran\nGanda','Pungutan\nLiar','Suap','Kegiatan\nFiktif','Pemotongan\nAnggaran','Penyalahgunaan\nWewenang','Mark\nup','Laporan\nFiktif','Penggelapan','Penyalahgunaan\nAnggaran']
+       }
     ],
     series : [
         {
@@ -142,6 +192,50 @@ var modusOption = {
         }
     ]
 };
+
+var institutionOption = {
+    title : {
+        text: 'Korupsi Berdasarkan Modus',
+        subtext: 'Jumlah Kasus Pada Semester I 2014'
+    },
+    tooltip : {
+        trigger: 'axis',
+        axisPointer : { 
+            type : 'shadow'
+        },
+    },
+    toolbox: {
+        show : false,
+        feature : {
+            mark : {show: true},
+            dataView : {show: true, readOnly: false},
+            magicType: {show: true, type: ['bar']},
+            restore : {show: true},
+            saveAsImage : {show: true}
+        }
+    },
+    calculable : true,
+    xAxis : [
+        {
+            type : 'value',
+            boundaryGap : [0, 0.01]
+        }
+    ],
+    yAxis : [
+        {
+            type : 'category',
+            data : ['Anggaran\nGanda','Pungutan\nLiar','Suap','Kegiatan\nFiktif','Pemotongan\nAnggaran','Penyalahgunaan\nWewenang','Mark\nup','Laporan\nFiktif','Penggelapan','Penyalahgunaan\nAnggaran']
+       }
+    ],
+    series : [
+        {
+            //name:'2011年',
+            type:'bar',
+            data:[1, 8, 11, 12, 15, 20,33,66,71,71]
+        }
+    ]
+};
+
 
 require(
     [
@@ -159,17 +253,15 @@ require(
 
         var mapChart = ec.init(document.getElementById('map'));
 
-
         mapChart.setOption(mapOption);
 
         var modusChart = ec.init(document.getElementById('modus-chart'));
         modusChart.setOption(modusOption);
 
         var sectorChart = ec.init(document.getElementById('sector-chart'));
-        sectorChart.setOption(modusOption);
+        sectorChart.setOption(sectorOption);
 
         var institutionChart = ec.init(document.getElementById('institution-chart'));
-        institutionChart.setOption(modusOption);
-       
+        institutionChart.setOption(institutionOption);
     }
 );
