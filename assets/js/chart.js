@@ -18,7 +18,10 @@ var mapOption = {
         text: '',
         subtext: 'Kasus Korupsi di Indonesia Berdasarkan Provinsi (Semester I 2014)',
         x:'left',
-        y:'bottom'
+        y:'bottom',
+        subtextStyle : {
+            fontFamily : "'Lora', serif",
+        }
     },
     tooltip : {
         trigger: 'item',
@@ -37,7 +40,10 @@ var mapOption = {
         max: 29,
         color: ['darkred','lightgray'],
         text:['Tinggi','Rendah'],
-        calculable : true
+        calculable : true,
+        textStyle : {
+            fontFamily : "'Lora', serif",
+        }
     },
     toolbox: {
         show : false,
@@ -102,7 +108,13 @@ var mapOption = {
 var modusOption = {
     title : {
         text: 'Korupsi Berdasarkan Modus',
-        subtext: 'Jumlah Kasus Pada Semester I 2014'
+        subtext: 'Jumlah Kasus Pada Semester I 2014',
+        textStyle : {
+            fontFamily : "'Lora', serif",
+        },
+        subtextStyle : {
+            fontFamily : "'Lora', serif",
+        }
     },
     tooltip : {
         trigger: 'axis',
@@ -124,13 +136,23 @@ var modusOption = {
     xAxis : [
         {
             type : 'value',
-            boundaryGap : [0, 0.01]
+            boundaryGap : [0, 0.01],
+            axisLabel : {
+                textStyle : {
+                    fontFamily : "'Lora', serif",
+                }
+            }
         }
     ],
     yAxis : [
         {
             type : 'category',
-            data : ['Anggaran\nGanda','Pungutan\nLiar','Suap','Kegiatan\nFiktif','Pemotongan\nAnggaran','Penyalahgunaan\nWewenang','Mark up','Laporan\nFiktif','Penggelapan','Penyalahgunaan\nAnggaran']
+            data : ['Anggaran\nGanda','Pungutan\nLiar','Suap','Kegiatan\nFiktif','Pemotongan\nAnggaran','Penyalahgunaan\nWewenang','Mark up','Laporan\nFiktif','Penggelapan','Penyalahgunaan\nAnggaran'],
+            axisLabel : {
+                textStyle : {
+                    fontFamily : "'Lora', serif",
+                }
+            }
        }
     ],
     grid : {
@@ -139,7 +161,6 @@ var modusOption = {
     },
     series : [
         {
-            //name:'2011年',
             type:'bar',
             data:[1, 8, 11, 12, 15, 20,33,66,71,71],
             itemStyle: {
@@ -152,7 +173,13 @@ var modusOption = {
 var sectorOption = {
     title : {
         text: 'Kasus Korupsi Berdasarkan Sektor',
-        subtext: 'Jumlah Kasus Pada Semester I 2014'
+        subtext: 'Jumlah Kasus Pada Semester I 2014',
+        textStyle : {
+            fontFamily : "'Lora', serif",
+        },
+        subtextStyle : {
+            fontFamily : "'Lora', serif",
+        }
     },
     tooltip : {
         trigger: 'axis',
@@ -160,9 +187,6 @@ var sectorOption = {
             type : 'shadow'
         },
     },
-    /*legend: {
-        data:['2011年', '2012年']
-    },*/
     toolbox: {
         show : false,
         feature : {
@@ -177,13 +201,23 @@ var sectorOption = {
     xAxis : [
         {
             type : 'value',
-            boundaryGap : [0, 0.01]
+            boundaryGap : [0, 0.01],
+            axisLabel : {
+                textStyle : {
+                    fontFamily : "'Lora', serif",
+                }
+            }
         }
     ],
     yAxis : [
         {
             type : 'category',
-            data : ['Pertambangan','Air\nBersih','Pertahanan','Perizinan','Perhubungan','Keagamaan','Perpajakan','Kehutanan','Kelautan\nPerikanan','Olahraga','Peternakan','Energi','Keuangan\nPusat','Tata Kota','Pemilu','Perbankan','Peradilan','Kepegawaian','Pertanian','Sosial','Kesehatan','Pendidikan','Keuangan\nDaerah','Infrastruktur']
+            data : ['Pertambangan','Air\nBersih','Pertahanan','Perizinan','Perhubungan','Keagamaan','Perpajakan','Kehutanan','Kelautan\nPerikanan','Olahraga','Peternakan','Energi','Keuangan\nPusat','Tata Kota','Pemilu','Perbankan','Peradilan','Kepegawaian','Pertanian','Sosial','Kesehatan','Pendidikan','Keuangan\nDaerah','Infrastruktur'],
+            axisLabel : {
+                textStyle : {
+                    fontFamily : "'Lora', serif",
+                }
+            }
        }
     ],
     grid : {
@@ -192,7 +226,6 @@ var sectorOption = {
     },
     series : [
         {
-            //name:'2011年',
             type:'bar',
             data:[1,2,3,3,3,3,5,5,6,6,7,7,7,7,9,10,11,15,16,31,38,59,116,175],
             itemStyle: {
@@ -205,7 +238,13 @@ var sectorOption = {
 var institutionOption = {
     title : {
         text: 'Kasus Korupsi Berdasarkan Instansi',
-        subtext: 'Jumlah Kasus Pada Semester I 2014'
+        subtext: 'Jumlah Kasus Pada Semester I 2014',
+        textStyle : {
+            fontFamily : "'Lora', serif",
+        },
+        subtextStyle : {
+            fontFamily : "'Lora', serif",
+        }
     },
     tooltip : {
         trigger: 'axis',
@@ -213,9 +252,6 @@ var institutionOption = {
             type : 'shadow'
         },
     },
-    /*legend: {
-        data:['2011年', '2012年']
-    },*/
     toolbox: {
         show : false,
         feature : {
@@ -230,13 +266,23 @@ var institutionOption = {
     xAxis : [
         {
             type : 'value',
-            boundaryGap : [0, 0.01]
+            boundaryGap : [0, 0.01],
+            axisLabel : {
+                textStyle : {
+                    fontFamily : "'Lora', serif",
+                }
+            }
         }
     ],
     yAxis : [
         {
             type : 'category',
-            data : ['Pajak','KY','Bank','Koperasi','Dispenda','Dinperindag','PNPM','Bappeda','BUMD','Disnakertrans','Penegak\nHukum','Kesehatan','Dinas\n(lain-lain)','Non\nPemerintah','Kelautan\ndan Perikanan','Dinas\nKesehatan','Dishubkominfo','Pendidikan','BUMN','ESDM','Badan\nPemerintahan','Dinas\nPendidikan','Kementrian','DPU','DPRD','Pemda']
+            data : ['Pajak','KY','Bank','Koperasi','Dispenda','Dinperindag','PNPM','Bappeda','BUMD','Disnakertrans','Penegak\nHukum','Kesehatan','Dinas\n(lain-lain)','Non\nPemerintah','Kelautan\ndan Perikanan','Dinas\nKesehatan','Dishubkominfo','Pendidikan','BUMN','ESDM','Badan\nPemerintahan','Dinas\nPendidikan','Kementrian','DPU','DPRD','Pemda'],
+            axisLabel : {
+                textStyle : {
+                    fontFamily : "'Lora', serif",
+                }
+            }
        }
     ],
     grid : {
@@ -262,14 +308,13 @@ require(
     ],
     function (ec) {
         require('echarts/util/mapData/params').params.USA = {
-		    getGeoJson: function (callback) {
+            getGeoJson: function (callback) {
                 $.getJSON('assets/js/geojson.json', callback); // Offline
                 // $.getJSON('//bitbucket.org/rifani/geojson-political-indonesia/raw/0e89dcb0b0454c5afffd414fd0cd0c25f1688d10/IDN_adm_1_province.json', callback); // Online
-		    }
-		}
+            }
+        }
 
         var mapChart = ec.init(document.getElementById('map'));
-
         mapChart.setOption(mapOption);
 
         var modusChart = ec.init(document.getElementById('modus-chart'));
