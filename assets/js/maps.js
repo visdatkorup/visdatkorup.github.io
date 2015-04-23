@@ -178,28 +178,30 @@ require(
     function (ec) {
         require('echarts/util/mapData/params').params.USA = {
 		    getGeoJson: function (callback) {
-		        $.getJSON('//ecomfe.github.io/echarts/doc/example/geoJson/USA_geo.json', callback);
-		    },
-		    specialArea : {
-		        Alaska : {              // 把阿拉斯加移到美国主大陆左下方
-		            left : -127,        // 安放位置起始点为西经113
-		            top : 30,           // 北纬31度
-		            width : 15,         // 区间大小宽高不大于15度
-		            height : 15
-		        },
-		        Hawaii : {
-		            left : -110,        // 夏威夷
-		            top : 28,
-		            width : 5,
-		            height : 5
-		        },
-		        'Puerto Rico' : {       // 波多黎各
-		            left : -76,
-		            top : 26,
-		            width : 2,
-		            height : 2
-		        }
+		        // $.getJSON('//ecomfe.github.io/echarts/doc/example/geoJson/USA_geo.json', callback);
+                $.getJSON('assets/js/geojson.json', callback); // Offline
+                // $.getJSON('//bitbucket.org/rifani/geojson-political-indonesia/raw/0e89dcb0b0454c5afffd414fd0cd0c25f1688d10/IDN_adm_1_province.json', callback); // Online
 		    }
+		    // specialArea : {
+		    //     Alaska : {              // 把阿拉斯加移到美国主大陆左下方
+		    //         left : -127,        // 安放位置起始点为西经113
+		    //         top : 30,           // 北纬31度
+		    //         width : 15,         // 区间大小宽高不大于15度
+		    //         height : 15
+		    //     },
+		    //     Hawaii : {
+		    //         left : -110,        // 夏威夷
+		    //         top : 28,
+		    //         width : 5,
+		    //         height : 5
+		    //     },
+		    //     'Puerto Rico' : {       // 波多黎各
+		    //         left : -76,
+		    //         top : 26,
+		    //         width : 2,
+		    //         height : 2
+		    //     }
+		    // }
 		}
 
         var mapChart = ec.init(document.getElementById('map'));
