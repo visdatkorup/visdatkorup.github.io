@@ -130,12 +130,12 @@ var modusOption = {
     yAxis : [
         {
             type : 'category',
-            data : ['Anggaran\nGanda','Pungutan\nLiar','Suap','Kegiatan\nFiktif','Pemotongan\nAnggaran','Penyalahgunaan\nWewenang','Mark\nup','Laporan\nFiktif','Penggelapan','Penyalahgunaan\nAnggaran']
+            data : ['Anggaran\nGanda','Pungutan\nLiar','Suap','Kegiatan\nFiktif','Pemotongan\nAnggaran','Penyalahgunaan\nWewenang','Mark up','Laporan\nFiktif','Penggelapan','Penyalahgunaan\nAnggaran']
        }
     ],
     grid : {
         x : 100,
-        x2 : 0,
+        x2 : 20,
     },
     series : [
         {
@@ -151,7 +151,7 @@ var modusOption = {
 
 var sectorOption = {
     title : {
-        text: 'Korupsi Berdasarkan Modus',
+        text: 'Kasus Korupsi Berdasarkan Sektor',
         subtext: 'Jumlah Kasus Pada Semester I 2014'
     },
     tooltip : {
@@ -160,12 +160,15 @@ var sectorOption = {
             type : 'shadow'
         },
     },
+    /*legend: {
+        data:['2011年', '2012年']
+    },*/
     toolbox: {
         show : false,
         feature : {
             mark : {show: true},
             dataView : {show: true, readOnly: false},
-            magicType: {show: true, type: ['bar']},
+            magicType: {show: true, type: ['line', 'bar']},
             restore : {show: true},
             saveAsImage : {show: true}
         }
@@ -180,21 +183,28 @@ var sectorOption = {
     yAxis : [
         {
             type : 'category',
-            data : ['Anggaran\nGanda','Pungutan\nLiar','Suap','Kegiatan\nFiktif','Pemotongan\nAnggaran','Penyalahgunaan\nWewenang','Mark\nup','Laporan\nFiktif','Penggelapan','Penyalahgunaan\nAnggaran']
+            data : ['Pertambangan','Air\nBersih','Pertahanan','Perizinan','Perhubungan','Keagamaan','Perpajakan','Kehutanan','Kelautan\nPerikanan','Olahraga','Peternakan','Energi','Keuangan\nPusat','Tata Kota','Pemilu','Perbankan','Peradilan','Kepegawaian','Pertanian','Sosial','Kesehatan','Pendidikan','Keuangan\nDaerah','Infrastruktur']
        }
     ],
+    grid : {
+        x : 100,
+        x2 : 20,
+    },
     series : [
         {
             //name:'2011年',
             type:'bar',
-            data:[1, 8, 11, 12, 15, 20,33,66,71,71]
+            data:[1,2,3,3,3,3,5,5,6,6,7,7,7,7,9,10,11,15,16,31,38,59,116,175],
+            itemStyle: {
+                normal:{color:'indianred'}
+            },
         }
     ]
 };
 
 var institutionOption = {
     title : {
-        text: 'Korupsi Berdasarkan Modus',
+        text: 'Kasus Korupsi Berdasarkan Instansi',
         subtext: 'Jumlah Kasus Pada Semester I 2014'
     },
     tooltip : {
@@ -203,12 +213,15 @@ var institutionOption = {
             type : 'shadow'
         },
     },
+    /*legend: {
+        data:['2011年', '2012年']
+    },*/
     toolbox: {
         show : false,
         feature : {
             mark : {show: true},
             dataView : {show: true, readOnly: false},
-            magicType: {show: true, type: ['bar']},
+            magicType: {show: true, type: ['line', 'bar']},
             restore : {show: true},
             saveAsImage : {show: true}
         }
@@ -223,100 +236,21 @@ var institutionOption = {
     yAxis : [
         {
             type : 'category',
-            data : ['Anggaran\nGanda','Pungutan\nLiar','Suap','Kegiatan\nFiktif','Pemotongan\nAnggaran','Penyalahgunaan\nWewenang','Mark\nup','Laporan\nFiktif','Penggelapan','Penyalahgunaan\nAnggaran']
+            data : ['Pajak','KY','Bank','Koperasi','Dispenda','Dinperindag','PNPM','Bappeda','BUMD','Disnakertrans','Penegak\nHukum','Kesehatan','Dinas\n(lain-lain)','Non\nPemerintah','Kelautan\ndan Perikanan','Dinas\nKesehatan','Dishubkominfo','Pendidikan','BUMN','ESDM','Badan\nPemerintahan','Dinas\nPendidikan','Kementrian','DPU','DPRD','Pemda']
        }
     ],
+    grid : {
+        x : 100,
+        x2 : 20,
+    },
     series : [
         {
             //name:'2011年',
             type:'bar',
-            data:[1, 8, 11, 12, 15, 20,33,66,71,71]
-        }
-    ]
-};
-
-var sectorOption = {
-    title : {
-        text: 'Kasus Korupsi Berdasarkan Sektor',
-        //subtext: '数据来自网络'
-    },
-    tooltip : {
-        trigger: 'axis'
-    },
-    /*legend: {
-        data:['2011年', '2012年']
-    },*/
-    toolbox: {
-        show : true,
-        feature : {
-            mark : {show: true},
-            dataView : {show: true, readOnly: false},
-            magicType: {show: true, type: ['line', 'bar']},
-            restore : {show: true},
-            saveAsImage : {show: true}
-        }
-    },
-    calculable : true,
-    xAxis : [
-        {
-            type : 'value',
-            boundaryGap : [0, 0.01]
-        }
-    ],
-    yAxis : [
-        {
-            type : 'category',
-            data : ['Pertambangan','Air Bersih','Pertahanan','Perizinan','Perhubungan','Keagamaan','Perpajakan','Kehutanan','Kelautan Perikanan','Olahraga','Peternakan','Energi','Keuangan Pusat','Tata Kota','Pemilu/Politik','Perbankan','Peradilan','Kepegawaian','Pertanian dan Perkebunan','Sosial kemasyarakatan','Kesehatan','Pendidikan','Keuangan Daerah','Infrastruktur']
-        }
-    ],
-    series : [
-        {
-            //name:'2011年',
-            type:'bar',
-            data:[1,2,3,3,3,3,5,5,6,6,7,7,7,7,9,10,11,15,16,31,38,59,116,175]
-        }
-    ]
-};
-
-var instansiOption = {
-    title : {
-        text: 'Kasus Korupsi Berdasarkan Instansi',
-        //subtext: '数据来自网络'
-    },
-    tooltip : {
-        trigger: 'axis'
-    },
-    /*legend: {
-        data:['2011年', '2012年']
-    },*/
-    toolbox: {
-        show : true,
-        feature : {
-            mark : {show: true},
-            dataView : {show: true, readOnly: false},
-            magicType: {show: true, type: ['line', 'bar']},
-            restore : {show: true},
-            saveAsImage : {show: true}
-        }
-    },
-    calculable : true,
-    xAxis : [
-        {
-            type : 'value',
-            boundaryGap : [0, 0.01]
-        }
-    ],
-    yAxis : [
-        {
-            type : 'category',
-            data : ['Dirjen Pajak','Komisi Yudisial','Bank','Koperasi','Dinas Pendapatan Daerah','Dinas Perdaganan dan Perindustrian','PNPM','Bappeda','BUMD','Dinas Sosial, Transmigrasi, dan Tenaga Kerja','Penegak Hukum','Instansi Kesehatan','Dinas (lain-lain)','Badan non Pemerintah','Dinas Kelautan dan Perikanan','Dinas Kesehatan','Dishubkominfo','Instansi Pendidikan','BUMN','Dinas ESDM','Badan Pemerintahan','Dinas Pendidikan','Kementrian','Dinas Pekerjaan Umum','DPRD','Pemerintahan Daerah']
-        }
-    ],
-    series : [
-        {
-            //name:'2011年',
-            type:'bar',
-            data:[1,1,2,2,3,3,3,4,4,4,4,5,6,7,8,8,9,13,13,14,18,19,19,20,21,97]
+            data:[1,1,2,2,3,3,3,4,4,4,4,5,6,7,8,8,9,13,13,14,18,19,19,20,21,97],
+            itemStyle: {
+                normal:{color:'indianred'}
+            },
         }
     ]
 };
