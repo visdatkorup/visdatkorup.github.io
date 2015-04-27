@@ -28,9 +28,33 @@ var mapOption = {
         showDelay: 0,
         transitionDuration: 0.2,
         formatter : function (params) {
-            var value = (params.value + '').split('.');
-            value = value[0].replace(/(\d{1,3})(?=(?:\d{3})+(?!\d))/g, '$1,');
-            return params.name + '<br/>' +  params.seriesName + ' : ' + value;
+            var values = (params.value + '').split('.');
+            value = values[0].replace(/(\d{1,3})(?=(?:\d{3})+(?!\d))/g, '$1,');
+            var text = params.name + '<br/>' + params.seriesName + ' : ' + value + '<br/>' +
+                'Peringkat Terkorup : ' + values[1] + '<br/>';
+            
+            if (params.name == 'Jakarta Raya') {
+                return text + '<br/>' +
+                    'DKI Jakarta memang tergolong provinsi yang cukup bersih.<br/>' +
+                    'Akan tetapi, jika digabungkan dengan korupsi pada tingkat pusat<br/>' +
+                    'maka DKI Jakarta merupakan wilayah terkorup di Indonesia';
+            } else if (params.name == 'Riau') {
+                return text + '<br/>' +
+                    'Riau dan wilayah sekitarnya sebagai daerah perkebunan sawit <br/>' +
+                    'menempati tempat ke-4 provinsi terkorup';
+            } else if (params.name == 'Papua') {
+                return text + '<br/>' +
+                    'Papua masuk 7 besar provinsi terkorup. <br/>' +
+                    'Papua  merupakan daerah tambang <br/>' +
+                    'emas terbesar di Indonesia';
+            } else if (params.name == 'Jawa Tengah') {
+                return text + '<br/>' +
+                    'Jawa sebagai daerah terpadat dan pusat ekonomi <br />' +
+                    'merupakan tempat 3 provinsi terkorup';
+            } else {
+                return text;
+            }
+
         }
     },
     dataRange: {
@@ -69,44 +93,44 @@ var mapOption = {
                         show: false
                     },
                     areaStyle : {
-                        color: 'orangered'
+                        color: 'orange'
                     },
                 }
             },
             data:[
-                {name : 'Aceh', value : 7},
-				{name : 'Kalimantan Timur', value : 4},
-				{name : 'Kalimantan Selatan', value : 3},
-				{name : 'Sulawesi Barat', value : 3},
-				{name : 'Sulawesi Tengah', value : 3},
-				{name : 'Nusa Tenggara Barat', value : 4},
-				{name : 'Sulawesi Tenggara', value : 4},
-				{name : 'Sulawesi Utara', value : 4},
-				{name : 'Bangka-Belitung', value : 5},
-				{name : 'Lampung', value : 5},
-				{name : 'Irian Jaya Barat', value : 5},
-				{name : 'Bali', value : 6},
-				{name : 'Bengkulu', value : 6},
-				{name : 'Gorontalo', value : 6},
-				{name : 'Kepulauan Riau', value : 6},
-				{name : 'Maluku', value : 6},
-				{name : 'Nusa Tenggara Timur', value : 6},
-				{name : 'Sumatera Selatan', value : 6},
-				{name : 'Yogyakarta', value : 7},
-				{name : 'Jakarta Raya', value : 8},
-				{name : 'Kalimantan Barat', value : 8},
-				{name : 'Maluku Utara', value : 8},
-				{name : 'Sumatera Utara', value : 9},
-				{name : 'Banten', value : 10},
-				{name : 'Sulawesi Selatan', value : 10},
-				{name : 'Kalimantan Tengah', value : 12},
-				{name : 'Papua', value : 12},
-				{name : 'Sumatera Barat', value : 12},
-				{name : 'Jambi', value : 14},
-				{name : 'Riau', value : 16},
-				{name : 'Jawa Timur', value : 21},
-				{name : 'Jawa Barat', value : 25},
-				{name : 'Jawa Tengah', value : 29},
+				{name : 'Kalimantan Selatan', value : '3.34'},
+				{name : 'Sulawesi Barat', value : '3.33'},
+				{name : 'Sulawesi Tengah', value : '3.32'},
+                {name : 'Kalimantan Timur', value : '4.31'},
+				{name : 'Nusa Tenggara Barat', value : '4.30'},
+				{name : 'Sulawesi Tenggara', value : '4.29'},
+				{name : 'Sulawesi Utara', value : '4.28'},
+				{name : 'Bangka-Belitung', value : '5.27'},
+				{name : 'Lampung', value : '5.26'},
+				{name : 'Irian Jaya Barat', value : '5.25'},
+				{name : 'Bali', value : '6.24'},
+				{name : 'Bengkulu', value : '6.23'},
+				{name : 'Gorontalo', value : '6.22'},
+				{name : 'Kepulauan Riau', value : '6.21'},
+				{name : 'Maluku', value : '6.20'},
+				{name : 'Nusa Tenggara Timur', value : '6.19'},
+				{name : 'Sumatera Selatan', value : '6.18'},
+                {name : 'Aceh', value : '7.17'},
+				{name : 'Yogyakarta', value : '7.16'},
+				{name : 'Jakarta Raya', value : '8.15'},
+				{name : 'Kalimantan Barat', value : '8.14'},
+				{name : 'Maluku Utara', value : '8.13'},
+				{name : 'Sumatera Utara', value : '9.12'},
+				{name : 'Banten', value : '10.11'},
+				{name : 'Sulawesi Selatan', value : '10.9'},
+				{name : 'Kalimantan Tengah', value : '12.8'},
+				{name : 'Papua', value : '12.7'},
+				{name : 'Sumatera Barat', value : '12.6'},
+				{name : 'Jambi', value : '14.5'},
+				{name : 'Riau', value : '16.4'},
+				{name : 'Jawa Timur', value : '21.3'},
+				{name : 'Jawa Barat', value : '25.2'},
+				{name : 'Jawa Tengah', value : '29.1'},
             ]
         }
     ]
