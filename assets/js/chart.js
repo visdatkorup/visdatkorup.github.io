@@ -30,8 +30,8 @@ var mapOption = {
         formatter : function (params) {
             var values = (params.value + '').split('.');
             value = values[0].replace(/(\d{1,3})(?=(?:\d{3})+(?!\d))/g, '$1,');
-            var text = params.name + '<br/>' + params.seriesName + ' : ' + value + '<br/>' +
-                'Peringkat Terkorup : ' + values[1] + '<br/>';
+            var text = '<strong>'+ params.name + '</strong>' + '<br/>' + params.seriesName + ' : <strong>' + value + '</strong><br/>' +
+                'Peringkat Terkorup : <strong>' + values[1] + '</strong><br/>';
             
             if (params.name == 'Jakarta Raya') {
                 return text + '<br/>' +
