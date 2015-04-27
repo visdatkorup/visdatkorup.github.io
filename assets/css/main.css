@@ -7,15 +7,18 @@ h1 {
 }
 
 b {
-	color: #7a161a;
+	color: #8b0000;
 }
 
 .header .description {
 	padding-top: 20px;
 }
 
-.main {
-	padding : 0 0 10px 0;
+
+@media (min-width: 992px) {
+	.main {
+		padding : 10px 0;
+	}
 }
 
 .secondary {

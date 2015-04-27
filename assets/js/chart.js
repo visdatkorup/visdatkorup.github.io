@@ -30,7 +30,7 @@ var mapOption = {
         formatter : function (params) {
             var value = (params.value + '').split('.');
             value = value[0].replace(/(\d{1,3})(?=(?:\d{3})+(?!\d))/g, '$1,');
-            return params.seriesName + '<br/>' + params.name + ' : ' + value;
+            return params.name + '<br/>' +  params.seriesName + ' : ' + value;
         }
     },
     dataRange: {
@@ -64,7 +64,14 @@ var mapOption = {
             roam: true,
             mapType: 'USA',
             itemStyle:{
-                emphasis:{label:{show:true}}
+                emphasis:{
+                    label: {
+                        show: false
+                    },
+                    areaStyle : {
+                        color: 'orangered'
+                    },
+                }
             },
             data:[
                 {name : 'Aceh', value : 7},
@@ -105,9 +112,9 @@ var mapOption = {
     ]
 };
 
-var modusOption = {
+var barDefaultOption = {
     title : {
-        text: 'Korupsi Berdasarkan Modus',
+        text: 'Korupsi Berdasarkan XYZ',
         subtext: 'Jumlah Kasus Pada Semester I 2014',
         textStyle : {
             fontFamily : "'Lora', serif",
@@ -121,6 +128,9 @@ var modusOption = {
         axisPointer : { 
             type : 'shadow'
         },
+        showDelay: 0,
+        transitionDuration: 0.2,
+
     },
     toolbox: {
         show : false,
@@ -141,9 +151,25 @@ var modusOption = {
                 textStyle : {
                     fontFamily : "'Lora', serif",
                 }
+            },
+            axisLine : {
+                lineStyle : {
+                    color : 'dimgray'
+                }
             }
         }
     ],
+    grid : {
+        x : 100,
+        x2 : 20,
+    },
+}
+
+var modusOption = {
+    title : {
+        text: 'Korupsi Berdasarkan Modus',
+        subtext: 'Jumlah Kasus Pada Semester I 2014',
+    },
     yAxis : [
         {
             type : 'category',
@@ -152,19 +178,29 @@ var modusOption = {
                 textStyle : {
                     fontFamily : "'Lora', serif",
                 }
+            },
+            axisLine : {
+                lineStyle : {
+                    color : 'dimgray'
+                }
+            },
+            axisTick : {
+                show : false
+            },
+            splitLine : {
+                show : false
             }
        }
     ],
-    grid : {
-        x : 100,
-        x2 : 20,
-    },
     series : [
         {
+            name: 'Jumlah Korupsi',
             type:'bar',
             data:[1, 8, 11, 12, 15, 20,33,66,71,71],
             itemStyle: {
-                normal:{color:'indianred'}
+                normal: {
+                    color: 'indianred'
+                }
             },
         }
     ]
@@ -174,41 +210,7 @@ var sectorOption = {
     title : {
         text: 'Kasus Korupsi Berdasarkan Sektor',
         subtext: 'Jumlah Kasus Pada Semester I 2014',
-        textStyle : {
-            fontFamily : "'Lora', serif",
-        },
-        subtextStyle : {
-            fontFamily : "'Lora', serif",
-        }
     },
-    tooltip : {
-        trigger: 'axis',
-        axisPointer : { 
-            type : 'shadow'
-        },
-    },
-    toolbox: {
-        show : false,
-        feature : {
-            mark : {show: true},
-            dataView : {show: true, readOnly: false},
-            magicType: {show: true, type: ['line', 'bar']},
-            restore : {show: true},
-            saveAsImage : {show: true}
-        }
-    },
-    calculable : true,
-    xAxis : [
-        {
-            type : 'value',
-            boundaryGap : [0, 0.01],
-            axisLabel : {
-                textStyle : {
-                    fontFamily : "'Lora', serif",
-                }
-            }
-        }
-    ],
     yAxis : [
         {
             type : 'category',
@@ -217,19 +219,29 @@ var sectorOption = {
                 textStyle : {
                     fontFamily : "'Lora', serif",
                 }
+            },
+            axisLine : {
+                lineStyle : {
+                    color : 'dimgray'
+                }
+            },
+            axisTick : {
+                show : false
+            },
+            splitLine : {
+                show : false
             }
        }
     ],
-    grid : {
-        x : 100,
-        x2 : 20,
-    },
     series : [
         {
+            name: 'Jumlah Korupsi',
             type:'bar',
             data:[1,2,3,3,3,3,5,5,6,6,7,7,7,7,9,10,11,15,16,31,38,59,116,175],
             itemStyle: {
-                normal:{color:'indianred'}
+                normal: {
+                    color: 'indianred'
+                }
             },
         }
     ]
@@ -239,41 +251,7 @@ var institutionOption = {
     title : {
         text: 'Kasus Korupsi Berdasarkan Instansi',
         subtext: 'Jumlah Kasus Pada Semester I 2014',
-        textStyle : {
-            fontFamily : "'Lora', serif",
-        },
-        subtextStyle : {
-            fontFamily : "'Lora', serif",
-        }
     },
-    tooltip : {
-        trigger: 'axis',
-        axisPointer : { 
-            type : 'shadow'
-        },
-    },
-    toolbox: {
-        show : false,
-        feature : {
-            mark : {show: true},
-            dataView : {show: true, readOnly: false},
-            magicType: {show: true, type: ['line', 'bar']},
-            restore : {show: true},
-            saveAsImage : {show: true}
-        }
-    },
-    calculable : true,
-    xAxis : [
-        {
-            type : 'value',
-            boundaryGap : [0, 0.01],
-            axisLabel : {
-                textStyle : {
-                    fontFamily : "'Lora', serif",
-                }
-            }
-        }
-    ],
     yAxis : [
         {
             type : 'category',
@@ -282,24 +260,34 @@ var institutionOption = {
                 textStyle : {
                     fontFamily : "'Lora', serif",
                 }
+            },
+            axisLine : {
+                lineStyle : {
+                    color : 'dimgray'
+                }
+            },
+            axisTick : {
+                show : false
+            },
+            splitLine : {
+                show : false
             }
        }
     ],
-    grid : {
-        x : 100,
-        x2 : 20,
-    },
     series : [
         {
-            //name:'2011年',
+            name: 'Jumlah Korupsi',
             type:'bar',
             data:[1,1,2,2,3,3,3,4,4,4,4,5,6,7,8,8,9,13,13,14,18,19,19,20,21,97],
             itemStyle: {
-                normal:{color:'indianred'}
+                normal:{
+                    color:'indianred'
+                }
             },
         }
     ]
 };
+
 require(
     [
         'echarts',
@@ -318,12 +306,15 @@ require(
         mapChart.setOption(mapOption);
 
         var modusChart = ec.init(document.getElementById('modus-chart'));
+        modusChart.setOption(barDefaultOption);
         modusChart.setOption(modusOption);
 
         var sectorChart = ec.init(document.getElementById('sector-chart'));
+        sectorChart.setOption(barDefaultOption);
         sectorChart.setOption(sectorOption);
 
         var institutionChart = ec.init(document.getElementById('institution-chart'));
+        institutionChart.setOption(barDefaultOption);
         institutionChart.setOption(institutionOption);
     }
 );
