@@ -38,7 +38,7 @@ var mapOption = {
     },
     options: [{
         title : {
-            text: 'Semester 1 2014',
+            text: 'Semester 1 / 2014',
             subtext: 'Jumlah Kasus Berdasarkan Provinsi',
             x:'left',
             y:'bottom',
@@ -159,7 +159,7 @@ var mapOption = {
     },
     {
         title : {
-            text: 'Semester 1 2013',
+            text: 'Semester 1 / 2013',
             subtext: 'Jumlah Kasus Berdasarkan Provinsi',
         },
         series : [{
@@ -202,7 +202,7 @@ var mapOption = {
     },
     {
         title : {
-            text: 'Semester 2 2013',
+            text: 'Semester 2 / 2013',
             subtext: 'Jumlah Kasus Berdasarkan Provinsi',
         },
         series : [{
@@ -249,7 +249,7 @@ var mapOption = {
 var barDefaultOption = {
     title : {
         text: 'Korupsi Berdasarkan XYZ',
-        subtext: 'Jumlah Kasus Pada Semester I 2014',
+        subtext: 'Jumlah Kasus Pada Semester I / 2014',
         textStyle : {
             fontFamily : "'Lora', serif",
         },
@@ -302,7 +302,7 @@ var barDefaultOption = {
 var modusOption = {
     title : {
         text: 'Korupsi Berdasarkan Modus',
-        subtext: 'Jumlah Kasus Pada Semester I 2014',
+        subtext: 'Jumlah Kasus Pada Semester I / 2014',
     },
     yAxis : [
         {
@@ -343,7 +343,7 @@ var modusOption = {
 var sectorOption = {
     title : {
         text: 'Kasus Korupsi Berdasarkan Sektor',
-        subtext: 'Jumlah Kasus Pada Semester I 2014',
+        subtext: 'Jumlah Kasus Pada Semester I / 2014',
     },
     yAxis : [
         {
@@ -384,7 +384,7 @@ var sectorOption = {
 var institutionOption = {
     title : {
         text: 'Kasus Korupsi Berdasarkan Instansi',
-        subtext: 'Jumlah Kasus Pada Semester I 2014',
+        subtext: 'Jumlah Kasus Pada Semester I / 2014',
     },
     yAxis : [
         {
